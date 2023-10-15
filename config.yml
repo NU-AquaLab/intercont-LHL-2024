@@ -1,0 +1,325 @@
+itdk-login:
+  user: ""
+  password: ""
+paths:
+  raw-metadata: "data/raw/raw-metadata/meta-{:04d}{:02d}{:02d}.txt.bz2"
+  cleaned-metadata: "data/raw/cleaned-metadata/{}/cleaned-meta-{}-{:04d}{:02d}{:02d}.csv.gz"
+  atlas-traceroute-measurements: "data/raw/atlas-traceroute-measurements/{}/{}/{}/{}_{}.json"
+  rtt-traceroute-timeseries-data: "data/processed/rtt-traceroute-timeseries-data/{}/{}/{}.csv.gz"
+  viz-rtt-traceroute-timeseries: "figures/rtt-timeseries/{}/{}/{}_{}_{}.pdf"
+  ripe-traceroute-campaign-2020:
+    long-haul-detection: "data/processed/long-haul-detection/ripe-traceroute-campaign-2020/{}.json"
+  hawaii:
+    traceroute-measurements: "data/raw/hawaii/ripe-atlas-measurements"
+    long-haul-detection: "data/processed/long-haul-detection/hawaii/{}_{}.json"
+  ark:
+    traceroute-measurements:
+      "warts": "data/raw/ark/{}/warts"
+      "json": "data/raw/ark/{}/json"
+    interhop-latency: "data/processed/interhop-latency/ark/{}/{}/{}/{}"
+    long-haul-detection: "data/processed/reprocessed-long-haul-detection/ark/{}/{}/{}/{}"
+    all-links-detection: "data/processed/all-links-detection/ark/{}/{}/{}/{}"
+    long-haul-detection-multimodal: "data/processed/processed-long-haul-detection-multimodal/ark/{}/{}/{}/{}"
+    consolidated-long-haul-explorations: "data/processed/consolidated-long-haul-explorations/ark/{}_{}_1-{}.csv.gz"
+    consolidated-long-haul-destinations: "data/processed/consolidated-long-haul-destinations/ark/{}_{}_1-{}.csv.gz"
+    consolidated-stable-long-haul-explorations: "data/processed/consolidated-stable-long-haul-explorations/ark/{}_{}_1-{}.csv.gz"
+    consolidated-multimodality-long-haul-explorations: "data/processed/consolidated-multimodality-long-haul-explorations/ark/{}_{}_1-{}.csv.gz"
+  segment-length: "data/external/caleb-segments/segments_lenght.csv"
+  itdk:
+    midar:
+      raw-file: "data/raw/itdk/midar/"
+    bdrmapit:
+      raw-file: "data/raw/itdk/bdrmapit/"
+    geoloc:
+      raw-file: "data/raw/itdk/geoloc/"
+    sqlite-database:
+      dir: "data/processed/itdk"
+      db: "data/processed/itdk/itdk.sqlite"
+  pdb: 
+    json: "data/raw/pdb/json/peeringdb_2_dump_{:04d}_{:02d}_{:02d}.json"
+    sqlite: "data/raw/pdb/sqlite/peeringdb_2_dump_{:04d}_{:02d}_{:02d}.sqlite"
+  min-cc-dist: "data/processed/min-cc-dist"
+
+snapshots:
+  - date:
+      yyyy: 2016
+      mm: 3
+      dd: 2
+    traceroute-measurements:
+      team: 2 
+      cycle: 4578
+      cycle-date: "20160302"
+    itdk-date: "20160301"
+  - date:
+      yyyy: 2016
+      mm: 3
+      dd: 2
+    traceroute-measurements:
+      team: 1 
+      cycle: 4577
+      cycle-date: "20160302"
+    itdk-date: "20160301"
+  - date:
+      yyyy: 2016
+      mm: 3
+      dd: 1
+    traceroute-measurements:
+      team: 3 
+      cycle: 4576
+      cycle-date: "20160301"
+    itdk-date: "20160301"
+  - date:
+      yyyy: 2020
+      mm: 10
+      dd: 2
+    traceroute-measurements:
+      team: 1 
+      cycle: 8820
+      cycle-date: "20201002"
+    itdk-date: "20200801"
+  - date:
+      yyyy: 2020
+      mm: 10
+      dd: 2
+    traceroute-measurements:
+      team: 1 
+      cycle: 8821
+      cycle-date: "20201002"
+    itdk-date: "20200801"
+  - date:
+      yyyy: 2020
+      mm: 10
+      dd: 2
+    traceroute-measurements:
+      team: 1 
+      cycle: 8822
+      cycle-date: "20201002"
+    itdk-date: "20200801"
+  - date:
+      yyyy: 2020
+      mm: 10
+      dd: 9
+    traceroute-measurements:
+      team: 1 
+      cycle: 8838
+      cycle-date: "20201009"
+    itdk-date: "20200801"
+  - date:
+      yyyy: 2020
+      mm: 10
+      dd: 9
+    traceroute-measurements:
+      team: 1 
+      cycle: 8839
+      cycle-date: "20201009"
+    itdk-date: "20200801"
+  - date:
+      yyyy: 2020
+      mm: 10
+      dd: 9
+    traceroute-measurements:
+      team: 1 
+      cycle: 8840
+      cycle-date: "20201009"
+    itdk-date: "20200801"
+  - date:
+      yyyy: 2020
+      mm: 10
+      dd: 2
+    traceroute-measurements:
+      team: 1 
+      cycle: 8818
+      cycle-date: "20201001"
+    itdk-date: "20200801"
+  - date:
+      yyyy: 2019
+      mm: 8
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 7615
+      cycle-date: "20190801"
+    itdk-date: "20190401"
+  - date:
+      yyyy: 2019
+      mm: 8
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 7616
+      cycle-date: "20190801"
+    itdk-date: "20190401"
+  - date:
+      yyyy: 2019
+      mm: 8
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 7617
+      cycle-date: "20190801"
+    itdk-date: "20190401"
+  - date:
+      yyyy: 2018
+      mm: 3
+      dd: 1
+    traceroute-measurements:
+      team: 2 
+      cycle: 6447
+      cycle-date: "20180301"
+    itdk-date: "20180301"
+  - date:
+      yyyy: 2018
+      mm: 3
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 6448
+      cycle-date: "20180301"
+    itdk-date: "20180301"
+  - date:
+      yyyy: 2018
+      mm: 3
+      dd: 1
+    traceroute-measurements:
+      team: 3 
+      cycle: 6446
+      cycle-date: "20180301"
+    itdk-date: "20180301"
+  - date:
+      yyyy: 2017
+      mm: 2
+      dd: 1
+    traceroute-measurements:
+      team: 2 
+      cycle: 5423
+      cycle-date: "20170201"
+    itdk-date: "20170201"
+  - date:
+      yyyy: 2017
+      mm: 2
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 5424
+      cycle-date: "20170201"
+    itdk-date: "20170201"
+  - date:
+      yyyy: 2017
+      mm: 2
+      dd: 1
+    traceroute-measurements:
+      team: 3 
+      cycle: 5422
+      cycle-date: "20170201"
+    itdk-date: "20170201"
+  - date:
+      yyyy: 2018
+      mm: 3
+      dd: 1
+    traceroute-measurements:
+      team: 2 
+      cycle: 6536
+      cycle-date: "20180401"
+    itdk-date: "20180301"
+  - date:
+      yyyy: 2018
+      mm: 3
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 6538
+      cycle-date: "20180401"
+    itdk-date: "20180301"
+  - date:
+      yyyy: 2018
+      mm: 3
+      dd: 1
+    traceroute-measurements:
+      team: 3 
+      cycle: 6537
+      cycle-date: "20180401"
+    itdk-date: "20180301"
+    #####################
+  - date:
+      yyyy: 2021
+      mm: 10
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 9643
+      cycle-date: "20211001"
+    itdk-date: "20210301"
+  - date:
+      yyyy: 2021
+      mm: 10
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 9644
+      cycle-date: "20211002"
+    itdk-date: "20210301"
+  - date:
+      yyyy: 2021
+      mm: 10
+      dd: 2
+    traceroute-measurements:
+      team: 1 
+      cycle: 9645
+      cycle-date: "20211002"
+    itdk-date: "20210301"
+    #####################
+  - date:
+      yyyy: 2022
+      mm: 5
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 10019
+      cycle-date: "20220501"
+    itdk-date: "20220201"
+  - date:
+      yyyy: 2022
+      mm: 5
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 10020
+      cycle-date: "20220501"
+    itdk-date: "20220201"
+  - date:
+      yyyy: 2022
+      mm: 5
+      dd: 1
+    traceroute-measurements:
+      team: 1 
+      cycle: 10021
+      cycle-date: "20220502"
+    itdk-date: "20220201"
+  - date:
+      yyyy: 2023
+      mm: 8
+      dd: 7
+    traceroute-measurements:
+      team: 1 
+      cycle: 10831
+      cycle-date: "20230807"
+    itdk-date: "20230301"
+  - date:
+      yyyy: 2023
+      mm: 8
+      dd: 7
+    traceroute-measurements:
+      team: 1 
+      cycle: 10832
+      cycle-date: "20230808"
+    itdk-date: "20230301"
+  - date:
+      yyyy: 2023
+      mm: 8
+      dd: 8
+    traceroute-measurements:
+      team: 1 
+      cycle: 10833
+      cycle-date: "20230808"
+    itdk-date: "20230301"
+
